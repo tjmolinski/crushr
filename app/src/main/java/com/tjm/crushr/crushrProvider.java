@@ -5,7 +5,9 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
+import android.widget.RemoteViews;
 
 /**
  * Created by cymak on 9/23/14.
@@ -14,9 +16,21 @@ public class crushrProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         for(int appWidgetId : appWidgetIds) {
-            //update widgets here
+            updateAppWidget(context, appWidgetManager, appWidgetId);
         }
         super.onUpdate(context, appWidgetManager, appWidgetIds);
+    }
+
+    public static void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.crushr_widget);
+
+        Intent listIntent = new Intent(context, crushrWidgetService.class);
+        listIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
+        listIntent.setData(Uri.parse(listIntent.toUri(Intent.URI_INTENT_SCHEME)));
+
+        views.setRemoteAdapter(R.id.crushr_listview, listIntent);
+
+        appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 
     @Override

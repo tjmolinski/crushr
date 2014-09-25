@@ -9,4 +9,11 @@
         android:text="Configure Screen"
         android:layout_gravity="center"/>
 
+    <Button
+        android:id="@+id/finish_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:layout_gravity="bottom|center_horizontal"/>
+
 </FrameLayout>
