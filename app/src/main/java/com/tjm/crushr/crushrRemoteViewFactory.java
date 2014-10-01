@@ -3,12 +3,16 @@ package com.tjm.crushr;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by cymak on 9/24/14.
@@ -21,20 +25,25 @@ public class crushrRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
 
     public crushrRemoteViewFactory(Context ctx, Intent intent) {
         context = ctx;
-        appWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,
-                AppWidgetManager.INVALID_APPWIDGET_ID);
+        appWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
         Log.d("AppWidgetId", String.valueOf(appWidgetId));
-        for(int i = 0; i < 10; i++) {
-            itemList.add("crushr" + i);
-        }
     }
 
     @Override
     public void onCreate() {
+        onDataSetChanged();
     }
 
     @Override
     public void onDataSetChanged() {
+        itemList.clear();
+        SharedPreferences prefs = context.getSharedPreferences("crushR", context.MODE_PRIVATE);
+        Set set = prefs.getStringSet("crushR", new HashSet<String>());
+
+        Object[] list = set.toArray();
+        for(Object item : list) {
+            itemList.add(item.toString());
+        }
     }
 
     @Override
@@ -71,6 +80,6 @@ public class crushrRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
 
     @Override
     public boolean hasStableIds() {
-        return false;
+        return true;
     }
 }

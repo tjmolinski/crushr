@@ -1,5 +1,6 @@
 package com.tjm.crushr;
 
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
@@ -13,6 +14,7 @@ import android.widget.RemoteViews;
  * Created by cymak on 9/23/14.
  */
 public class crushrProvider extends AppWidgetProvider {
+
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         for(int appWidgetId : appWidgetIds) {
@@ -27,9 +29,14 @@ public class crushrProvider extends AppWidgetProvider {
         Intent listIntent = new Intent(context, crushrWidgetService.class);
         listIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
         listIntent.setData(Uri.parse(listIntent.toUri(Intent.URI_INTENT_SCHEME)));
-
         views.setRemoteAdapter(R.id.crushr_listview, listIntent);
 
+        Intent addIntent = new Intent(context, crushrInputDialog.class);
+        addIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
+        PendingIntent addPendingIntent = PendingIntent.getActivity(context, 0, addIntent, 0);
+        views.setOnClickPendingIntent(R.id.add_crushr_button, addPendingIntent);
+
+        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.crushr_listview);
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 
