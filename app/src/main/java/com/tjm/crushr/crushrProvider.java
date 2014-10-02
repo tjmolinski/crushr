@@ -15,6 +15,9 @@ import android.widget.RemoteViews;
  */
 public class crushrProvider extends AppWidgetProvider {
 
+    public static final String SHARED_PREF_TAG = "crushr_shared_pref";
+    public static final String SHARED_PREF_LIST = "crushr_task_list";
+
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         for(int appWidgetId : appWidgetIds) {

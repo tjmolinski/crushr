@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
@@ -37,8 +36,8 @@ public class crushrRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
     @Override
     public void onDataSetChanged() {
         itemList.clear();
-        SharedPreferences prefs = context.getSharedPreferences("crushR", context.MODE_PRIVATE);
-        Set set = prefs.getStringSet("crushR", new HashSet<String>());
+        SharedPreferences prefs = context.getSharedPreferences(crushrProvider.SHARED_PREF_TAG, context.MODE_PRIVATE);
+        Set set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST, new HashSet<String>());
 
         Object[] list = set.toArray();
         for(Object item : list) {
