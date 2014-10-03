@@ -20,6 +20,10 @@
             android:excludeFromRecents="true">
         </activity>
 
+        <activity android:name=".DeleteReceiver"
+            android:launchMode="singleTop">
+        </activity>
+
         <receiver android:name=".crushrProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

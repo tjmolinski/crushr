@@ -17,6 +17,8 @@ public class crushrProvider extends AppWidgetProvider {
 
     public static final String SHARED_PREF_TAG = "crushr_shared_pref";
     public static final String SHARED_PREF_LIST = "crushr_task_list";
+    public static String EXTRA_WORD=
+            "com.commonsware.android.appwidget.lorem.WORD";
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -38,6 +40,10 @@ public class crushrProvider extends AppWidgetProvider {
         addIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
         PendingIntent addPendingIntent = PendingIntent.getActivity(context, 0, addIntent, 0);
         views.setOnClickPendingIntent(R.id.add_crushr_button, addPendingIntent);
+
+        Intent clickIntent=new Intent(context, DeleteReceiver.class);
+        PendingIntent clickPI=PendingIntent.getActivity(context, 0, clickIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        views.setPendingIntentTemplate(R.id.crushr_listview, clickPI);
 
         appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.crushr_listview);
         appWidgetManager.updateAppWidget(appWidgetId, views);
