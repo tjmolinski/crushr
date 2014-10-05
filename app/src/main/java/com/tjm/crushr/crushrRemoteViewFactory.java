@@ -1,11 +1,9 @@
 package com.tjm.crushr;
 
-import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -67,7 +65,7 @@ public class crushrRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
         Bundle extras = new Bundle();
         extras.putString(crushrProvider.EXTRA_WORD, itemList.get(position));
         i.putExtras(extras);
-        remoteView.setOnClickFillInIntent(R.id.status, i);
+        remoteView.setOnClickFillInIntent(R.id.container, i);
 
         return remoteView;
     }

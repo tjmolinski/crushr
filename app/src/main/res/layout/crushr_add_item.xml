@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:id="@+id/item">
+
+    <ImageView
+        android:id="@+id/crushr_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_delete"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+
+    <TextView
+        android:id="@+id/crushr_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/crushr_delete"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#000"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

@@ -41,8 +41,8 @@ public class crushrProvider extends AppWidgetProvider {
         PendingIntent addPendingIntent = PendingIntent.getActivity(context, 0, addIntent, 0);
         views.setOnClickPendingIntent(R.id.add_crushr_button, addPendingIntent);
 
-        Intent clickIntent=new Intent(context, DeleteReceiver.class);
-        PendingIntent clickPI=PendingIntent.getActivity(context, 0, clickIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent clickIntent = new Intent(context, crushrDeleteDialog.class);
+        PendingIntent clickPI = PendingIntent.getActivity(context, 0, clickIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         views.setPendingIntentTemplate(R.id.crushr_listview, clickPI);
 
         appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.crushr_listview);

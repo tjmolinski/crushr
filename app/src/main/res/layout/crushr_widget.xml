@@ -3,17 +3,54 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffeeeeee">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:text="crushR"
+        android:textColor="#fff"
+        android:background="@color/primary_color"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:gravity="center_vertical"/>
     <ListView
+        android:layout_below="@id/title"
         android:id="@+id/crushr_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:src="@drawable/shadow"
+        android:layout_below="@id/title"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@drawable/shadow"
+        android:layout_below="@id/crushr_listview"/>
+    <ImageView
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/circle_shadow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
     <ImageView
         android:id="@+id/add_crushr_button"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/add_button"
-        android:layout_alignParentBottom="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/add_button"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"/>
 </RelativeLayout>

@@ -16,12 +16,14 @@
 
         <activity android:name=".crushrInputDialog"
             android:launchMode="singleInstance"
-            android:theme="@android:style/Theme.Dialog"
+            android:theme="@style/ThemeDialogCustom"
             android:excludeFromRecents="true">
         </activity>
 
-        <activity android:name=".DeleteReceiver"
-            android:launchMode="singleTop">
+        <activity android:name=".crushrDeleteDialog"
+            android:launchMode="singleInstance"
+            android:theme="@style/ThemeDialogCustom"
+            android:excludeFromRecents="true">
         </activity>
 
         <receiver android:name=".crushrProvider">

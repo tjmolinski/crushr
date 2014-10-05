@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:top="2dp" android:right="2dp" android:left="2dp" android:bottom="2dp">
+    <item>
         <shape android:shape="oval">
-            <solid android:color="#ff18ffff" />
-            <size android:width="75dp" android:height="75dp"/>
+        <solid android:color="@color/secondary_color" />
         </shape>
     </item>
-    <item android:right="20dp" android:left="20dp">
+    <item android:right="15dp" android:left="15dp">
         <rotate android:fromDegrees="90" android:toDegrees="90">
             <shape android:shape="line">
                 <stroke
-                    android:width="4dp"
-                    android:color="#ff444444"/>
+                    android:width="2dp"
+                    android:color="#222"/>
                 <corners android:radius="100px" />
             </shape>
         </rotate>
     </item>
-    <item android:left="20dp" android:right="20dp">
+    <item android:left="15dp" android:right="15dp">
         <shape android:shape="line">
             <stroke
-                android:width="4dp"
-                android:color="#ff444444"/>
+                android:width="2dp"
+                android:color="#222"/>
         </shape>
     </item>
 </layer-list>
