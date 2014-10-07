@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tasks"
+                android:text="@string/tasks"
                 android:textColor="#000"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -55,7 +55,7 @@
         android:paddingTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:hint="New task"
+        android:hint="@string/new_task"
         android:imeOptions="actionDone"
         android:singleLine="true"/>
 
@@ -63,16 +63,16 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:orientation="horizontal"
-        android:paddingRight="16dp"
-        android:paddingLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:gravity="right">
         <Button
             android:id="@+id/input_ok"
             android:layout_width="100dp"
-            android:layout_height="36dp"
-            android:text="SAVE"
+            android:layout_height="match_parent"
+            android:text="@string/save"
             android:layout_gravity="center"
-            android:background="#00ffffff"
+            android:background="@drawable/dialog_button"
             android:textColor="#000"
             android:textSize="20sp"
             android:gravity="center"/>
@@ -80,10 +80,10 @@
         <Button
             android:id="@+id/input_add"
             android:layout_width="100dp"
-            android:layout_height="36dp"
-            android:text="ADD"
+            android:layout_height="match_parent"
+            android:text="@string/add"
             android:layout_gravity="center"
-            android:background="#00ffffff"
+            android:background="@drawable/dialog_button"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="20sp"
             android:gravity="center"/>

@@ -5,4 +5,13 @@
         Are you sure you want to remove the task \"<b>%1$s</b>\" from the list?
         ]]>
     </string>
+    <string name="empty_task_error">Please enter a task.</string>
+    <string name="delete_task_title">Delete task</string>
+    <string name="tasks">Tasks</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+    <string name="new_task">New task</string>
+    <string name="save">SAVE</string>
+    <string name="add">ADD</string>
+    <string name="empty_task_list">No tasks to crush!</string>
 </resources>

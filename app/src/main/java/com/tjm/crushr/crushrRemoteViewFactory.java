@@ -38,7 +38,7 @@ public class crushrRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
     public void onDataSetChanged() {
         itemList.clear();
         SharedPreferences prefs = context.getSharedPreferences(crushrProvider.SHARED_PREF_TAG, context.MODE_PRIVATE);
-        Set set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST, new HashSet<String>());
+        Set set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST+appWidgetId, new HashSet<String>());
 
         Object[] list = set.toArray();
         for(Object item : list) {
@@ -64,6 +64,7 @@ public class crushrRemoteViewFactory implements RemoteViewsService.RemoteViewsFa
         Intent i = new Intent();
         Bundle extras = new Bundle();
         extras.putString(crushrProvider.EXTRA_WORD, itemList.get(position));
+        extras.putInt(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
         i.putExtras(extras);
         remoteView.setOnClickFillInIntent(R.id.container, i);
 

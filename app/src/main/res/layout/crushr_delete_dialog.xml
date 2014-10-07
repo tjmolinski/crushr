@@ -18,7 +18,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Delete task"
+                android:text="@string/delete_task_title"
                 android:textColor="#000"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -41,16 +41,16 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:orientation="horizontal"
-        android:paddingRight="16dp"
-        android:paddingLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:gravity="right">
         <Button
             android:id="@+id/input_cancel"
             android:layout_width="100dp"
-            android:layout_height="36dp"
-            android:text="CANCEL"
+            android:layout_height="match_parent"
+            android:text="@string/cancel"
             android:layout_gravity="center"
-            android:background="#00ffffff"
+            android:background="@drawable/dialog_button"
             android:textColor="#000"
             android:textSize="20sp"
             android:gravity="center"/>
@@ -58,10 +58,10 @@
         <Button
             android:id="@+id/input_ok"
             android:layout_width="100dp"
-            android:layout_height="36dp"
-            android:text="OK"
+            android:layout_height="match_parent"
+            android:text="@string/ok"
             android:layout_gravity="center"
-            android:background="#00ffffff"
+            android:background="@drawable/dialog_button"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="20sp"
             android:gravity="center"/>

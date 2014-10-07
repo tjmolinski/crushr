@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="pressed">#1f84ffff</color>
     <color name="primary_color">#00b0ff</color>
     <color name="secondary_color">#84ffff</color>
 </resources>

@@ -14,6 +14,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,9 +25,10 @@ import java.util.Set;
  */
 public class crushrInputDialog extends Activity {
 
-    EditText newTask;
-    ArrayList<String> tasks;
-    LinearLayout mContainerView;
+    private EditText newTask;
+    private ArrayList<String> tasks;
+    private LinearLayout mContainerView;
+    private int appWidgetId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,20 +40,13 @@ public class crushrInputDialog extends Activity {
         mContainerView = (LinearLayout)findViewById(R.id.container);
         newTask = (EditText)findViewById(R.id.new_task);
         tasks = new ArrayList<String>();
-
-        //TODO:TJM FIX THE ISSUE IF WE HIT BACK BUTTON AND NOT CLEARING THE LIST
+        appWidgetId = getIntent().getExtras().getInt(AppWidgetManager.EXTRA_APPWIDGET_ID);
 
         newTask.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE || event == null || event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
                     String task = newTask.getText().toString().trim();
-                    SharedPreferences prefs = getSharedPreferences(crushrProvider.SHARED_PREF_TAG, MODE_PRIVATE);
-                    SharedPreferences.Editor editor = prefs.edit();
-                    Set<String> set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST, new HashSet<String>());
-                    set.add(task);
-                    editor.remove(crushrProvider.SHARED_PREF_LIST);
-                    editor.putStringSet(crushrProvider.SHARED_PREF_LIST, set);
-                    editor.commit();
+                    PrefUtils.addItem(getApplicationContext(), task, appWidgetId);
                     addItem(task);
                     return true;
                 }
@@ -60,7 +55,7 @@ public class crushrInputDialog extends Activity {
         });
 
         SharedPreferences prefs = getSharedPreferences(crushrProvider.SHARED_PREF_TAG, MODE_PRIVATE);
-        Set<String> set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST, new HashSet<String>());
+        Set<String> set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST+appWidgetId, new HashSet<String>());
         for(String item : set) {
             addItem(item);
         }
@@ -71,6 +66,7 @@ public class crushrInputDialog extends Activity {
                 AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
                 int appWidgetIds[] = appWidgetManager.getAppWidgetIds(new ComponentName(getApplicationContext(), crushrProvider.class));
                 appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.crushr_listview);
+                crushrProvider.updateAppWidget(getApplicationContext(), appWidgetManager, appWidgetId);
 
                 finish();
             }
@@ -80,16 +76,22 @@ public class crushrInputDialog extends Activity {
             @Override
             public void onClick(View view) {
                 String task = newTask.getText().toString().trim();
-                SharedPreferences prefs = getSharedPreferences(crushrProvider.SHARED_PREF_TAG, MODE_PRIVATE);
-                SharedPreferences.Editor editor = prefs.edit();
-                Set<String> set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST, new HashSet<String>());
-                set.add(task);
-                editor.remove(crushrProvider.SHARED_PREF_LIST);
-                editor.putStringSet(crushrProvider.SHARED_PREF_LIST, set);
-                editor.commit();
-                addItem(task);
+                if(task.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), getString(R.string.empty_task_error), Toast.LENGTH_LONG).show();
+                } else {
+                    PrefUtils.addItem(getApplicationContext(), task, appWidgetId);
+                    addItem(task);
+                }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        int appWidgetIds[] = appWidgetManager.getAppWidgetIds(new ComponentName(getApplicationContext(), crushrProvider.class));
+        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.crushr_listview);
+        super.onBackPressed();
     }
 
     private void addItem(final String text) {
@@ -103,19 +105,7 @@ public class crushrInputDialog extends Activity {
             public void onClick(View view) {
                 mContainerView.removeView(newView);
                 tasks.remove(text);
-
-                SharedPreferences prefs = getSharedPreferences(crushrProvider.SHARED_PREF_TAG, MODE_PRIVATE);
-                SharedPreferences.Editor editor = prefs.edit();
-                Set<String> set = prefs.getStringSet(crushrProvider.SHARED_PREF_LIST, new HashSet<String>());
-                set.remove(text);
-                editor.remove(crushrProvider.SHARED_PREF_LIST);
-                editor.putStringSet(crushrProvider.SHARED_PREF_LIST, set);
-                editor.commit();
-
-//                // If there are no rows remaining, show the empty view.
-//                if (mContainerView.getChildCount() == 0) {
-//                    findViewById(android.R.id.empty).setVisibility(View.VISIBLE);
-//                }
+                PrefUtils.removeItem(getApplicationContext(), text, appWidgetId);
             }
         });
 

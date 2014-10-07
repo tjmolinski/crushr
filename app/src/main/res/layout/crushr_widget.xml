@@ -11,17 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="60dp"
-        android:text="crushR"
+        android:text="@string/app_name"
         android:textColor="#fff"
         android:background="@color/primary_color"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:padding="8dp"
         android:gravity="center_vertical"/>
     <ListView
         android:layout_below="@id/title"
         android:id="@+id/crushr_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_below="@id/title"
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/empty_task_list"
+        android:gravity="center"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="3dp"

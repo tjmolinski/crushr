@@ -5,7 +5,5 @@
     android:minHeight="100dp"
     android:minWidth="100dp"
     android:resizeMode="horizontal|vertical"
-    android:configure="com.tjm.crushr.crushrConfigure"
-    android:widgetCategory="home_screen|keyguard"
     android:updatePeriodMillis="0" >
 </appwidget-provider>

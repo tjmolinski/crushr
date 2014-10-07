@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="#fff"
+    android:background="@drawable/dialog_button"
     android:padding="16dp"
     android:id="@+id/container">
     <ImageView
@@ -16,9 +16,6 @@
         android:id="@+id/todo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="crushr item should go here"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
         android:textColor="#000"/>
 
 </LinearLayout>
