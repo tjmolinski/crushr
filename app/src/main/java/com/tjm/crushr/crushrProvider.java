@@ -41,11 +41,11 @@ public class crushrProvider extends AppWidgetProvider {
 
         Intent addIntent = new Intent(context, crushrInputDialog.class);
         addIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
-        PendingIntent addPendingIntent = PendingIntent.getActivity(context, 0, addIntent, 0);
+        PendingIntent addPendingIntent = PendingIntent.getActivity(context, appWidgetId, addIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         views.setOnClickPendingIntent(R.id.add_crushr_button, addPendingIntent);
 
         Intent clickIntent = new Intent(context, crushrDeleteDialog.class);
-        PendingIntent clickPI = PendingIntent.getActivity(context, 0, clickIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent clickPI = PendingIntent.getActivity(context, appWidgetId, clickIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         views.setPendingIntentTemplate(R.id.crushr_listview, clickPI);
 
         SharedPreferences prefs = context.getSharedPreferences(crushrProvider.SHARED_PREF_TAG, context.MODE_PRIVATE);

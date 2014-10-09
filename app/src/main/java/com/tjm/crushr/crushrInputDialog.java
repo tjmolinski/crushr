@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class crushrInputDialog extends Activity {
         newTask = (EditText)findViewById(R.id.new_task);
         tasks = new ArrayList<String>();
         appWidgetId = getIntent().getExtras().getInt(AppWidgetManager.EXTRA_APPWIDGET_ID);
-
+        Log.d("LOOK HERE", appWidgetId+"");
         newTask.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE || event == null || event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
