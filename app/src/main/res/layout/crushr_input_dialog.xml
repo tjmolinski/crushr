@@ -51,6 +51,7 @@
         android:id="@+id/new_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#fff"
         android:textColor="#000"
         android:paddingTop="16dp"
         android:layout_marginLeft="16dp"
