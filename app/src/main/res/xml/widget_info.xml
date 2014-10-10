@@ -5,5 +5,6 @@
     android:minHeight="100dp"
     android:minWidth="100dp"
     android:resizeMode="horizontal|vertical"
-    android:updatePeriodMillis="0" >
+    android:updatePeriodMillis="0"
+    android:previewImage="@drawable/ic_launcher">
 </appwidget-provider>
