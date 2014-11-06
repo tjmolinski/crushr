@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     android:background="#ffeeeeee">
 
-    <TextView
+    <FrameLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="60dp"
-        android:text="@string/app_name"
-        android:textColor="#fff"
-        android:background="@color/primary_color"
-        android:textSize="16sp"
-        android:padding="8dp"
-        android:gravity="center_vertical"/>
+        android:layout_height="30dp"
+        android:background="@color/primary_color">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:scaleType="fitStart"
+            android:padding="4dp"
+            android:layout_gravity="left"/>
+    </FrameLayout>
     <ListView
         android:layout_below="@id/title"
         android:id="@+id/crushr_listview"
@@ -44,8 +46,8 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginRight="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="14dp"
         android:layout_marginBottom="15dp"
         android:src="@drawable/circle_shadow"
         android:layout_alignParentTop="true"
@@ -55,8 +57,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
         android:src="@drawable/add_button"
         android:layout_alignParentTop="true"
