@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">crushr</string>
+    <string name="delete_task">
+        <![CDATA[
+        Opravdu chcete odstranit úkol \"<b>%1$s</b>\" ze seznamu?
+        ]]>
+    </string>
+    <string name="empty_task_error">Vložte prosím úkol.</string>
+    <string name="delete_task_title">Smazat úkol</string>
+    <string name="tasks">Úkoly</string>
+    <string name="cancel">UKONČIT</string>
+    <string name="ok">OK</string>
+    <string name="new_task">Nový úkol</string>
+    <string name="save">ULOŽIT</string>
+    <string name="add">PŘIDAT</string>
+    <string name="empty_task_list">Žádné úkoly k vyřešení!</string>
+</resources>
