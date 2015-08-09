@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -52,7 +52,7 @@
         android:src="@drawable/circle_shadow"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"/>
-    <ImageView
+    <RelativeLayout
         android:id="@+id/add_crushr_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -60,7 +60,16 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/add_button"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:id="@+id/add_crushr_button_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/add_button"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/add_button_cross"/>
+    </RelativeLayout>
 </RelativeLayout>

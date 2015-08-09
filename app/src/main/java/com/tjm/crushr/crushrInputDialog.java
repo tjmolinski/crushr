@@ -5,7 +5,6 @@ import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,6 +59,13 @@ public class crushrInputDialog extends Activity {
         for(String item : set) {
             addItem(item);
         }
+
+        findViewById(R.id.settings).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_LONG).show();
+            }
+        });
 
         findViewById(R.id.input_ok).setOnClickListener(new View.OnClickListener() {
             @Override

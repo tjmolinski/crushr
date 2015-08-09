@@ -44,6 +44,9 @@ public class crushrProvider extends AppWidgetProvider {
         PendingIntent addPendingIntent = PendingIntent.getActivity(context, appWidgetId, addIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         views.setOnClickPendingIntent(R.id.add_crushr_button, addPendingIntent);
 
+        views.setInt(R.id.title, "setBackgroundColor", context.getResources().getColor(android.R.color.holo_red_dark));
+        views.setInt(R.id.add_crushr_button_bg, "setColorFilter", context.getResources().getColor(android.R.color.white));
+
         Intent clickIntent = new Intent(context, crushrDeleteDialog.class);
         PendingIntent clickPI = PendingIntent.getActivity(context, appWidgetId, clickIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         views.setPendingIntentTemplate(R.id.crushr_listview, clickPI);

@@ -5,21 +5,4 @@
         <solid android:color="@color/secondary_color" />
         </shape>
     </item>
-    <item android:right="15dp" android:left="15dp">
-        <rotate android:fromDegrees="90" android:toDegrees="90">
-            <shape android:shape="line">
-                <stroke
-                    android:width="2dp"
-                    android:color="#222"/>
-                <corners android:radius="100px" />
-            </shape>
-        </rotate>
-    </item>
-    <item android:left="15dp" android:right="15dp">
-        <shape android:shape="line">
-            <stroke
-                android:width="2dp"
-                android:color="#222"/>
-        </shape>
-    </item>
 </layer-list>
