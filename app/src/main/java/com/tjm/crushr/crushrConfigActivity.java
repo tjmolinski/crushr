@@ -2,11 +2,9 @@ package com.tjm.crushr;
 
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -15,8 +13,10 @@ import android.widget.Toast;
  */
 public class crushrConfigActivity extends Activity {
 
-    private RadioGroup mFirstGroup;
-    private RadioGroup mSecondGroup;
+    private RadioGroup mFirstPrimaryGroup;
+    private RadioGroup mSecondPrimaryGroup;
+    private RadioGroup mFirstSecondaryGroup;
+    private RadioGroup mSecondSecondaryGroup;
     private boolean isChecking = true;
     private int appWidgetId;
 
@@ -27,26 +27,49 @@ public class crushrConfigActivity extends Activity {
         setContentView(R.layout.crushr_config);
         appWidgetId = getIntent().getExtras().getInt(AppWidgetManager.EXTRA_APPWIDGET_ID);
 
-        mFirstGroup = (RadioGroup) findViewById(R.id.primary_color_selector_first_row);
-        mSecondGroup = (RadioGroup) findViewById(R.id.primary_color_selector_second_row);
+        mFirstPrimaryGroup = (RadioGroup) findViewById(R.id.primary_color_selector_first_row);
+        mSecondPrimaryGroup = (RadioGroup) findViewById(R.id.primary_color_selector_second_row);
 
-        mFirstGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        mFirstSecondaryGroup = (RadioGroup) findViewById(R.id.secondary_color_selector_first_row);
+        mSecondSecondaryGroup = (RadioGroup) findViewById(R.id.secondary_color_selector_second_row);
+
+        mFirstPrimaryGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId != -1 && isChecking) {
                     isChecking = false;
-                    mSecondGroup.clearCheck();
+                    mSecondPrimaryGroup.clearCheck();
+                }
+                isChecking = true;
+            }
+        });
+        mSecondPrimaryGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1 && isChecking) {
+                    isChecking = false;
+                    mFirstPrimaryGroup.clearCheck();
                 }
                 isChecking = true;
             }
         });
 
-        mSecondGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        mFirstSecondaryGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId != -1 && isChecking) {
                     isChecking = false;
-                    mFirstGroup.clearCheck();
+                    mSecondSecondaryGroup.clearCheck();
+                }
+                isChecking = true;
+            }
+        });
+        mSecondSecondaryGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1 && isChecking) {
+                    isChecking = false;
+                    mFirstSecondaryGroup.clearCheck();
                 }
                 isChecking = true;
             }
@@ -73,14 +96,86 @@ public class crushrConfigActivity extends Activity {
 
     public void onPrimaryButtonClicked(View view) {
         switch(view.getId()) {
-        case R.id.primary_color_1:
-            Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
-            PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_1), appWidgetId);
-            break;
-        case R.id.primary_color_2:
-            Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
-            PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_2), appWidgetId);
-            break;
+            case R.id.primary_color_1:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_1), appWidgetId);
+                break;
+            case R.id.primary_color_2:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_2), appWidgetId);
+                break;
+            case R.id.primary_color_3:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_3), appWidgetId);
+                break;
+            case R.id.primary_color_4:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_4), appWidgetId);
+                break;
+            case R.id.primary_color_5:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_5), appWidgetId);
+                break;
+            case R.id.primary_color_6:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_6), appWidgetId);
+                break;
+            case R.id.primary_color_7:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_7), appWidgetId);
+                break;
+            case R.id.primary_color_8:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_8), appWidgetId);
+                break;
+            case R.id.primary_color_9:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_9), appWidgetId);
+                break;
+            case R.id.primary_color_10:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_10), appWidgetId);
+                break;
+            case R.id.primary_color_11:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_11), appWidgetId);
+                break;
+            case R.id.primary_color_12:
+                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_12), appWidgetId);
+                break;
+        }
+
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        crushrProvider.updateAppWidget(getApplicationContext(), appWidgetManager, appWidgetId);
+    }
+
+    public void onSecondaryButtonClicked(View view) {
+        switch(view.getId()) {
+            case R.id.secondary_color_1:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_1), appWidgetId);
+                break;
+            case R.id.secondary_color_2:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_2), appWidgetId);
+                break;
+            case R.id.secondary_color_3:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_3), appWidgetId);
+                break;
+            case R.id.secondary_color_4:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_4), appWidgetId);
+                break;
+            case R.id.secondary_color_5:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_5), appWidgetId);
+                break;
+            case R.id.secondary_color_6:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_6), appWidgetId);
+                break;
+            case R.id.secondary_color_7:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_7), appWidgetId);
+                break;
+            case R.id.secondary_color_8:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_8), appWidgetId);
+                break;
+            case R.id.secondary_color_9:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_9), appWidgetId);
+                break;
+            case R.id.secondary_color_10:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_10), appWidgetId);
+                break;
+            case R.id.secondary_color_11:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_11), appWidgetId);
+                break;
+            case R.id.secondary_color_12:
+                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_12), appWidgetId);
+                break;
         }
 
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="color_border">#888888</color>
     <color name="pressed">#1f84ffff</color>
     <color name="primary_color_1">#00b0ff</color>
     <color name="primary_color_2">#f44336</color>
@@ -13,5 +14,16 @@
     <color name="primary_color_10">#2196f3</color>
     <color name="primary_color_11">#000000</color>
     <color name="primary_color_12">#d500f9</color>
-    <color name="secondary_color">#84ffff</color>
+    <color name="secondary_color_1">#84ffff</color>
+    <color name="secondary_color_2">#a7ffeb</color>
+    <color name="secondary_color_3">#b9f6ca</color>
+    <color name="secondary_color_4">#b388ff</color>
+    <color name="secondary_color_5">#ff8a80</color>
+    <color name="secondary_color_6">#ff80ab</color>
+    <color name="secondary_color_7">#ea80fc</color>
+    <color name="secondary_color_8">#ff9e80</color>
+    <color name="secondary_color_9">#ffd180</color>
+    <color name="secondary_color_10">#ffff8d</color>
+    <color name="secondary_color_11">#ffffff</color>
+    <color name="secondary_color_12">#f4ff81</color>
 </resources>

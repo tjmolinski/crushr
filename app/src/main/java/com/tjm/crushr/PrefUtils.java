@@ -35,7 +35,14 @@ public class PrefUtils {
     public static void setPrimaryColor(Context ctx, int color, int id) {
         SharedPreferences prefs = ctx.getSharedPreferences(crushrProvider.SHARED_PREF_TAG, ctx.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(crushrProvider.SHARED_PREF_PRIMARY_COLOR+id, color);
+        editor.putInt(crushrProvider.SHARED_PREF_PRIMARY_COLOR + id, color);
+        editor.commit();
+    }
+
+    public static void setSecondaryColor(Context ctx, int color, int id) {
+        SharedPreferences prefs = ctx.getSharedPreferences(crushrProvider.SHARED_PREF_TAG, ctx.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(crushrProvider.SHARED_PREF_SECONDARY_COLOR+id, color);
         editor.commit();
     }
 }

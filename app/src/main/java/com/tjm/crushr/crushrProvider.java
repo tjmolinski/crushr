@@ -23,6 +23,7 @@ public class crushrProvider extends AppWidgetProvider {
     public static final String SHARED_PREF_TAG = "crushr_shared_pref";
     public static final String SHARED_PREF_LIST = "crushr_task_list_";
     public static final String SHARED_PREF_PRIMARY_COLOR = "crushr_primary_color_";
+    public static final String SHARED_PREF_SECONDARY_COLOR = "crushr_secondary_color_";
     public static final String EXTRA_WORD = "crushr_word";
 
     @Override
@@ -60,11 +61,10 @@ public class crushrProvider extends AppWidgetProvider {
             views.setViewVisibility(R.id.crushr_listview, View.VISIBLE);
         }
 
-        int primColor = prefs.getInt(crushrProvider.SHARED_PREF_PRIMARY_COLOR+appWidgetId, context.getResources().getColor(R.color.primary_color_2));
-        Log.d("TEST", "Color: " + primColor);
-        Log.d("TEST", "SavedColor: " + R.color.primary_color_2);
-        views.setInt(R.id.title, "setBackgroundColor", primColor);
-        views.setInt(R.id.add_crushr_button_bg, "setColorFilter", context.getResources().getColor(android.R.color.white));
+        int primaryColor = prefs.getInt(crushrProvider.SHARED_PREF_PRIMARY_COLOR+appWidgetId, context.getResources().getColor(R.color.primary_color_1));
+        int secondaryColor = prefs.getInt(crushrProvider.SHARED_PREF_SECONDARY_COLOR+appWidgetId, context.getResources().getColor(R.color.secondary_color_1));
+        views.setInt(R.id.title, "setBackgroundColor", primaryColor);
+        views.setInt(R.id.add_crushr_button_bg, "setColorFilter", secondaryColor);
 
         appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.crushr_listview);
         appWidgetManager.updateAppWidget(appWidgetId, views);

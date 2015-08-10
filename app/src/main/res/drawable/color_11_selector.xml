@@ -6,11 +6,13 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
             <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
                 <shape android:shape="oval">
                     <solid android:color="#ffffff"/>
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -21,6 +23,7 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -32,11 +35,13 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
             <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
                 <shape android:shape="oval">
                     <solid android:color="#ffffff"/>
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -47,6 +52,7 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -58,11 +64,13 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
             <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
                 <shape android:shape="oval">
                     <solid android:color="#ffffff"/>
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -73,6 +81,7 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -84,6 +93,7 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -94,11 +104,13 @@
                 <shape android:shape="rectangle"  >
                     <corners android:radius="10dip" />
                     <solid android:color="@color/primary_color_11" />
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
             <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
                 <shape android:shape="oval">
                     <solid android:color="#ffffff"/>
+                    <stroke android:color="@color/color_border" android:width="0.5dp"/>
                 </shape>
             </item>
         </layer-list>
