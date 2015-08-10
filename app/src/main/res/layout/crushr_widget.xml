@@ -10,7 +10,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="@color/primary_color">
+        android:background="@color/primary_color_1">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/empty_task_list"
+        android:textColor="@android:color/black"
         android:gravity="center"/>
     <ImageView
         android:layout_width="match_parent"

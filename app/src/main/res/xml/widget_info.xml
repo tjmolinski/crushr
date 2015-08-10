@@ -6,5 +6,6 @@
     android:minWidth="100dp"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="0"
-    android:previewImage="@drawable/preview">
+    android:previewImage="@drawable/preview"
+    android:configure="com.tjm.crushr.crushrConfigActivity" >
 </appwidget-provider>

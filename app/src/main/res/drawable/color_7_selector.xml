@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_checked="true" android:state_window_focused="false">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+            <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
+                <shape android:shape="oval">
+                    <solid android:color="#ffffff"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false" android:state_window_focused="false">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_checked="true" android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+            <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
+                <shape android:shape="oval">
+                    <solid android:color="#ffffff"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false" android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_checked="true" android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+            <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
+                <shape android:shape="oval">
+                    <solid android:color="#ffffff"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false" android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_checked="false">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle"  >
+                    <corners android:radius="10dip" />
+                    <solid android:color="@color/primary_color_7" />
+                </shape>
+            </item>
+            <item android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
+                <shape android:shape="oval">
+                    <solid android:color="#ffffff"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

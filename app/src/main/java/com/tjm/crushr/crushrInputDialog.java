@@ -3,6 +3,7 @@ package com.tjm.crushr;
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -64,6 +65,9 @@ public class crushrInputDialog extends Activity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_LONG).show();
+                Intent configIntent = new Intent(getApplicationContext(), crushrConfigActivity.class);
+                configIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
+                startActivity(configIntent);
             }
         });
 

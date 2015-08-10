@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="pressed">#1f84ffff</color>
-    <color name="primary_color">#00b0ff</color>
+    <color name="primary_color_1">#00b0ff</color>
+    <color name="primary_color_2">#f44336</color>
+    <color name="primary_color_3">#9c27b0</color>
+    <color name="primary_color_4">#e91e63</color>
+    <color name="primary_color_5">#607d8b</color>
+    <color name="primary_color_6">#ffeb3b</color>
+    <color name="primary_color_7">#ff9800</color>
+    <color name="primary_color_8">#009688</color>
+    <color name="primary_color_9">#cddc39</color>
+    <color name="primary_color_10">#2196f3</color>
+    <color name="primary_color_11">#000000</color>
+    <color name="primary_color_12">#d500f9</color>
     <color name="secondary_color">#84ffff</color>
 </resources>

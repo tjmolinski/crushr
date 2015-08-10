@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -21,6 +22,7 @@ public class crushrProvider extends AppWidgetProvider {
 
     public static final String SHARED_PREF_TAG = "crushr_shared_pref";
     public static final String SHARED_PREF_LIST = "crushr_task_list_";
+    public static final String SHARED_PREF_PRIMARY_COLOR = "crushr_primary_color_";
     public static final String EXTRA_WORD = "crushr_word";
 
     @Override
@@ -44,9 +46,6 @@ public class crushrProvider extends AppWidgetProvider {
         PendingIntent addPendingIntent = PendingIntent.getActivity(context, appWidgetId, addIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         views.setOnClickPendingIntent(R.id.add_crushr_button, addPendingIntent);
 
-        views.setInt(R.id.title, "setBackgroundColor", context.getResources().getColor(android.R.color.holo_red_dark));
-        views.setInt(R.id.add_crushr_button_bg, "setColorFilter", context.getResources().getColor(android.R.color.white));
-
         Intent clickIntent = new Intent(context, crushrDeleteDialog.class);
         PendingIntent clickPI = PendingIntent.getActivity(context, appWidgetId, clickIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         views.setPendingIntentTemplate(R.id.crushr_listview, clickPI);
@@ -60,6 +59,12 @@ public class crushrProvider extends AppWidgetProvider {
             views.setViewVisibility(R.id.empty, View.GONE);
             views.setViewVisibility(R.id.crushr_listview, View.VISIBLE);
         }
+
+        int primColor = prefs.getInt(crushrProvider.SHARED_PREF_PRIMARY_COLOR+appWidgetId, context.getResources().getColor(R.color.primary_color_2));
+        Log.d("TEST", "Color: " + primColor);
+        Log.d("TEST", "SavedColor: " + R.color.primary_color_2);
+        views.setInt(R.id.title, "setBackgroundColor", primColor);
+        views.setInt(R.id.add_crushr_button_bg, "setColorFilter", context.getResources().getColor(android.R.color.white));
 
         appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.crushr_listview);
         appWidgetManager.updateAppWidget(appWidgetId, views);
