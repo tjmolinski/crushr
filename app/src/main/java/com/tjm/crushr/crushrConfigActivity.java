@@ -3,10 +3,12 @@ package com.tjm.crushr;
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 /**
  * Created by tedmolinski on 8/9/15.
@@ -19,6 +21,8 @@ public class crushrConfigActivity extends Activity {
     private RadioGroup mSecondSecondaryGroup;
     private boolean isChecking = true;
     private int appWidgetId;
+    private int primaryColorId = -1;
+    private int secondaryColorId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,17 +79,34 @@ public class crushrConfigActivity extends Activity {
             }
         });
 
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences(crushrProvider.SHARED_PREF_TAG, getApplicationContext().MODE_PRIVATE);
+        int primaryColor = prefs.getInt(crushrProvider.SHARED_PREF_PRIMARY_COLOR + appWidgetId, getApplicationContext().getResources().getColor(R.color.primary_color_1));
+        int secondaryColor = prefs.getInt(crushrProvider.SHARED_PREF_SECONDARY_COLOR+appWidgetId, getApplicationContext().getResources().getColor(R.color.secondary_color_1));
+        loadColorSelections(primaryColor, secondaryColor);
+
         findViewById(R.id.input_cancel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "CLOSE", Toast.LENGTH_LONG).show();
+                Intent resultValue = new Intent();
+                resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
+                setResult(RESULT_OK, resultValue);
+                finish();
             }
         });
 
         findViewById(R.id.input_save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "SAVE", Toast.LENGTH_LONG).show();
+                if(primaryColorId >= 0) {
+                    PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(primaryColorId), appWidgetId);
+                }
+                if(secondaryColorId >= 0) {
+                    PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(secondaryColorId), appWidgetId);
+                }
+
+                AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+                crushrProvider.updateAppWidget(getApplicationContext(), appWidgetManager, appWidgetId);
+
                 Intent resultValue = new Intent();
                 resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
                 setResult(RESULT_OK, resultValue);
@@ -94,92 +115,140 @@ public class crushrConfigActivity extends Activity {
         });
     }
 
+    private void loadColorSelections(int pColor, int sColor) {
+        Resources res = getApplicationContext().getResources();
+        if(pColor == res.getColor(R.color.primary_color_1)) {
+            ((RadioButton)findViewById(R.id.primary_color_1)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_2)) {
+            ((RadioButton)findViewById(R.id.primary_color_2)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_3)) {
+            ((RadioButton)findViewById(R.id.primary_color_3)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_4)) {
+            ((RadioButton)findViewById(R.id.primary_color_4)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_5)) {
+            ((RadioButton)findViewById(R.id.primary_color_5)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_6)) {
+            ((RadioButton)findViewById(R.id.primary_color_6)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_7)) {
+            ((RadioButton)findViewById(R.id.primary_color_7)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_8)) {
+            ((RadioButton)findViewById(R.id.primary_color_8)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_9)) {
+            ((RadioButton)findViewById(R.id.primary_color_9)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_10)) {
+            ((RadioButton)findViewById(R.id.primary_color_10)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_11)) {
+            ((RadioButton)findViewById(R.id.primary_color_11)).setChecked(true);
+        } else if(pColor == res.getColor(R.color.primary_color_12)) {
+            ((RadioButton)findViewById(R.id.primary_color_12)).setChecked(true);
+        }
+        if(sColor == res.getColor(R.color.secondary_color_1)) {
+            ((RadioButton)findViewById(R.id.secondary_color_1)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_2)) {
+            ((RadioButton)findViewById(R.id.secondary_color_2)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_3)) {
+            ((RadioButton)findViewById(R.id.secondary_color_3)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_4)) {
+            ((RadioButton)findViewById(R.id.secondary_color_4)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_5)) {
+            ((RadioButton)findViewById(R.id.secondary_color_5)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_6)) {
+            ((RadioButton)findViewById(R.id.secondary_color_6)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_7)) {
+            ((RadioButton)findViewById(R.id.secondary_color_7)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_8)) {
+            ((RadioButton)findViewById(R.id.secondary_color_8)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_9)) {
+            ((RadioButton)findViewById(R.id.secondary_color_9)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_10)) {
+            ((RadioButton)findViewById(R.id.secondary_color_10)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_11)) {
+            ((RadioButton)findViewById(R.id.secondary_color_11)).setChecked(true);
+        } else if(sColor == res.getColor(R.color.secondary_color_12)) {
+            ((RadioButton)findViewById(R.id.secondary_color_12)).setChecked(true);
+        }
+    }
+
     public void onPrimaryButtonClicked(View view) {
         switch(view.getId()) {
             case R.id.primary_color_1:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_1), appWidgetId);
+                primaryColorId = R.color.primary_color_1;
                 break;
             case R.id.primary_color_2:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_2), appWidgetId);
+                primaryColorId = R.color.primary_color_2;
                 break;
             case R.id.primary_color_3:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_3), appWidgetId);
+                primaryColorId = R.color.primary_color_3;
                 break;
             case R.id.primary_color_4:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_4), appWidgetId);
+                primaryColorId = R.color.primary_color_4;
                 break;
             case R.id.primary_color_5:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_5), appWidgetId);
+                primaryColorId = R.color.primary_color_5;
                 break;
             case R.id.primary_color_6:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_6), appWidgetId);
+                primaryColorId = R.color.primary_color_6;
                 break;
             case R.id.primary_color_7:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_7), appWidgetId);
+                primaryColorId = R.color.primary_color_7;
                 break;
             case R.id.primary_color_8:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_8), appWidgetId);
+                primaryColorId = R.color.primary_color_8;
                 break;
             case R.id.primary_color_9:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_9), appWidgetId);
+                primaryColorId = R.color.primary_color_9;
                 break;
             case R.id.primary_color_10:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_10), appWidgetId);
+                primaryColorId = R.color.primary_color_10;
                 break;
             case R.id.primary_color_11:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_11), appWidgetId);
+                primaryColorId = R.color.primary_color_11;
                 break;
             case R.id.primary_color_12:
-                PrefUtils.setPrimaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.primary_color_12), appWidgetId);
+                primaryColorId = R.color.primary_color_12;
                 break;
         }
-
-        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
-        crushrProvider.updateAppWidget(getApplicationContext(), appWidgetManager, appWidgetId);
     }
 
     public void onSecondaryButtonClicked(View view) {
         switch(view.getId()) {
             case R.id.secondary_color_1:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_1), appWidgetId);
+                secondaryColorId = R.color.secondary_color_1;
                 break;
             case R.id.secondary_color_2:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_2), appWidgetId);
+                secondaryColorId = R.color.secondary_color_2;
                 break;
             case R.id.secondary_color_3:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_3), appWidgetId);
+                secondaryColorId = R.color.secondary_color_3;
                 break;
             case R.id.secondary_color_4:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_4), appWidgetId);
+                secondaryColorId = R.color.secondary_color_4;
                 break;
             case R.id.secondary_color_5:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_5), appWidgetId);
+                secondaryColorId = R.color.secondary_color_5;
                 break;
             case R.id.secondary_color_6:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_6), appWidgetId);
+                secondaryColorId = R.color.secondary_color_6;
                 break;
             case R.id.secondary_color_7:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_7), appWidgetId);
+                secondaryColorId = R.color.secondary_color_7;
                 break;
             case R.id.secondary_color_8:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_8), appWidgetId);
+                secondaryColorId = R.color.secondary_color_8;
                 break;
             case R.id.secondary_color_9:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_9), appWidgetId);
+                secondaryColorId = R.color.secondary_color_9;
                 break;
             case R.id.secondary_color_10:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_10), appWidgetId);
+                secondaryColorId = R.color.secondary_color_10;
                 break;
             case R.id.secondary_color_11:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_11), appWidgetId);
+                secondaryColorId = R.color.secondary_color_11;
                 break;
             case R.id.secondary_color_12:
-                PrefUtils.setSecondaryColor(getApplicationContext(), getApplicationContext().getResources().getColor(R.color.secondary_color_12), appWidgetId);
+                secondaryColorId = R.color.secondary_color_12;
                 break;
         }
-
-        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
-        crushrProvider.updateAppWidget(getApplicationContext(), appWidgetManager, appWidgetId);
     }
 
     @Override

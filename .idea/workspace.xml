@@ -10,24 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e2b4bd-fded-4c09-878f-82872e120cbb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/PrefUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/PrefUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/add_button.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/add_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_10_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_10_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_11_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_11_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_12_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_12_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_1_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_1_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_2_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_2_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_3_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_3_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_4_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_4_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_5_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_5_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_6_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_6_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_7_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_7_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_8_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_8_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/color_9_selector.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/color_9_selector.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrConfigActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrConfigActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrInputDialog.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrInputDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/crushr_config.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/crushr_config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="crushr.iws" />
@@ -58,12 +44,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="crushrProvider.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="crushrProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.682243">
-              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-              <folding />
+            <state vertical-scroll-proportion="-6.0">
+              <caret line="48" column="67" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,31 +59,42 @@
       <file leaf-file-name="crushrInputDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrInputDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+            <state vertical-scroll-proportion="-6.0">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="30" />
               <folding>
-                <element signature="e#2823#3418#0" expanded="true" />
-                <element signature="e#3417#3418#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2728#3565#0" expanded="true" />
+                <element signature="e#3564#3565#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crushrDeleteDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrDeleteDialog.java">
+      <file leaf-file-name="crushrWidgetService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrWidgetService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.4368932">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrefUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/PrefUtils.java">
+      <file leaf-file-name="crushrRemoteViewFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrRemoteViewFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.8888888">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -104,31 +103,11 @@
       <file leaf-file-name="crushrConfigActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrConfigActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="32" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
+            <state vertical-scroll-proportion="-6.0">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="27" />
               <folding>
-                <element signature="e#1294#1658#0" expanded="true" />
-                <element signature="e#1657#1658#0" expanded="true" />
-                <element signature="e#1716#2079#0" expanded="true" />
-                <element signature="e#2078#2079#0" expanded="true" />
-                <element signature="e#2139#2505#0" expanded="true" />
-                <element signature="e#2504#2505#0" expanded="true" />
-                <element signature="e#2565#2930#0" expanded="true" />
-                <element signature="e#2929#2930#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crushr_config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/crushr_config.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3411765">
-              <caret line="254" column="57" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="57" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1587,9 +1566,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_selected.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/crushr_config_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrInputDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/crushr_widget.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_1_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_3_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_4_selector.xml" />
@@ -1614,9 +1591,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_21_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_22_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/color_24_selector.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrConfigActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/crushr_config.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/PrefUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrConfigActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrInputDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrProvider.java" />
       </list>
     </option>
@@ -1660,7 +1639,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1908,6 +1886,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -2139,8 +2118,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1436" height="877" extended-state="0" />
-    <editor active="false" />
+    <frame x="4" y="23" width="1436" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2154,7 +2133,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40078843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28646517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2212,13 +2191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrWidgetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/preview.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2228,7 +2200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2236,7 +2207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2244,7 +2214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2253,18 +2222,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrRemoteViewFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/add_button.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2272,7 +2233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2290,7 +2250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27663934">
           <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2298,7 +2257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33811477">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2306,7 +2264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.522541">
           <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2314,7 +2271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06147541">
           <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2348,19 +2304,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/color_1_selector.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.142857">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2368,7 +2315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2376,7 +2322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2384,7 +2329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2392,7 +2336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2400,7 +2343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2408,7 +2350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2416,7 +2357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2424,7 +2364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2432,7 +2371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2440,7 +2378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2448,7 +2385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2456,7 +2392,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2464,7 +2399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2472,7 +2406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2480,7 +2413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2488,7 +2420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2496,7 +2427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2504,7 +2434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2512,7 +2441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2520,7 +2448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2528,7 +2455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2536,7 +2462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2544,18 +2469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7196262">
           <caret line="112" column="87" selection-start-line="112" selection-start-column="87" selection-end-line="112" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrInputDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-          <folding>
-            <element signature="e#2823#3418#0" expanded="true" />
-            <element signature="e#3417#3418#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2567,46 +2480,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/PrefUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5048544">
+          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/crushr_config.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3411765">
-          <caret line="254" column="57" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.61728394">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrConfigActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="32" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="27" />
           <folding>
-            <element signature="e#1294#1658#0" expanded="true" />
-            <element signature="e#1657#1658#0" expanded="true" />
-            <element signature="e#1716#2079#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2139#2505#0" expanded="true" />
-            <element signature="e#2504#2505#0" expanded="true" />
-            <element signature="e#2565#2930#0" expanded="true" />
-            <element signature="e#2929#2930#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/PrefUtils.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrInputDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2728#3565#0" expanded="true" />
+            <element signature="e#3564#3565#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrRemoteViewFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.682243">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="48" column="67" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tjm/crushr/crushrWidgetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4368932">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>

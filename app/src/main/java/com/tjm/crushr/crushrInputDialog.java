@@ -64,7 +64,6 @@ public class crushrInputDialog extends Activity {
         findViewById(R.id.settings).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_LONG).show();
                 Intent configIntent = new Intent(getApplicationContext(), crushrConfigActivity.class);
                 configIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
                 startActivity(configIntent);
@@ -74,6 +73,12 @@ public class crushrInputDialog extends Activity {
         findViewById(R.id.input_ok).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String task = newTask.getText().toString().trim();
+                if(!task.isEmpty()) {
+                    PrefUtils.addItem(getApplicationContext(), task, appWidgetId);
+                    addItem(task);
+                }
+
                 AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
                 int appWidgetIds[] = appWidgetManager.getAppWidgetIds(new ComponentName(getApplicationContext(), crushrProvider.class));
                 appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.crushr_listview);
